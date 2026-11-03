@@ -1,0 +1,231 @@
+Mini-project #3 — Personal Utility Dashboard
+
+
+
+
+
+
+
+codefinity.com
+
+
+Personal Utility Dashboard
+C# Console Application · Beginner level
+
+This will be a program consisting of four main modules: a user profile, a budget calculator, a mathematical calculator, and a text analyzer.
+Practical Project
+C# Fundamentals
+
+
+1. What will you practice?
+| Topic | What you will use |
+|---|---|
+| Data Types | string, int, double, decimal, bool, char |
+| Type Casting | (int), Convert.ToInt32(), Convert.ToDouble() |
+| User Input | Console.ReadLine() |
+| Arithmetic Operators | +, -, *, /, % |
+| Assignment Operators | =, +=, -=, *=, /= |
+| Comparison Operators | ==, !=, >, <, >=, <= |
+| Logical Operators | &&, ||, ! |
+| Increment / Decrement | ++, -- |
+| Math | Sqrt, Abs, Round, Pow, Max, Min, Ceiling, Floor, PI |
+| Strings | ToUpper, ToLower, Length, Trim, Contains, Replace, IndexOf, Substring, StartsWith, EndsWith |
+
+You will also use comments (//), Console.WriteLine(), and string interpolation ($"...").
+
+2. Your Task
+Part A — Personal Profile
+Create a user profile.
+
+The program must ask the user for the following:
+Information	Variable	Type
+Name	name	string
+Age	age	int
+City	city	string
+Group letter	groupLetter	char
+Is a full-time student? isFullTime	bool
+Favorite technology	favoriteTechnology	string
+
+Requirements:
+
+Use Console.ReadLine() and the appropriate Convert methods to obtain the information.
+
+Then, display the profile in the console.
+
+Use .ToUpper() for the title and string interpolation ($"...") to output the values. Part B — Budget Calculator
+Now you will create a simple monthly budget calculator.
+
+Ask the user for the following:
+Information	Variable	Type
+Monthly budget	monthlyBudget	decimal
+Regular expenses	regularExpenses	decimal
+Extra expenses	extraExpenses	decimal
+
+Then, calculate:
+1. Total expenses (totalExpenses).
+2. Remaining budget (remainingBudget).
+3. The updated budget after increasing the monthly budget by 100 BGN.
+Requirements:
+
+Use `+=` to add the extra expenses, and either `+=` or `+` to increase the budget.
+
+Also, create a boolean variable named `isBudgetEnough` that checks whether the monthly budget is greater than or equal to the total expenses.
+
+This exercise will help you practice using the `decimal` type, as well as assignment and comparison operators.
+Part C — Advanced Calculator
+This is the mathematical module.
+
+Ask the user for two numbers:
+double firstNumber;
+double secondNumber;
+
+
+Then, perform the following calculations:
+Operation	Action required
+Sum	Add the two numbers
+Difference	Subtract the second number from the first
+Product	Multiply the two numbers
+Division	Divide the first number by the second
+Remainder	Find the remainder of the division
+
+Also, use comparison operators to determine:
+- Is the first number greater than the second?
+- Are the two numbers equal?
+- Is the first number less than or equal to the second?
+Store the results in `bool` variables.
+
+Finally, create another boolean variable that checks whether the user is of legal age (an adult) AND a full-time student, using the `&&` operator. Additional Exercise: Type Casting
+
+Convert the first number from `double` to `int` using `(int)` and output the result.
+
+Remember: for division and the modulo (remainder) operation, the second number must not be zero. For now, we will avoid using zero during testing, as we haven't covered `if` statements yet.
+Part D — Math Operations
+Next, we will work with the built-in `Math` class.
+
+Using the first number from the calculator, output the following:
+- Square root using `Math.Sqrt()`.
+- Absolute value using `Math.Abs()`.
+- Rounded value using `Math.Round()`.
+- Rounded up (ceiling) using `Math.Ceiling()`.
+- Rounded down (floor) using `Math.Floor()`.
+- Squared (raised to the power of 2) using `Math.Pow()`.
+Then, using both numbers, determine:
+- The larger number using `Math.Max()`.
+- The smaller number using `Math.Min()`.
+For the square root, ensure you use a non-negative value—for example, the absolute value of the first number.
+Additional Task — Circle Calculator
+Ask the user for the radius of a circle, then calculate its area and circumference.
+
+Use `Math.PI` and `Math.Pow()`.
+
+This is a great opportunity to practice the formulas from the previous exercise once more.
+Part E — Text Analyzer
+The final module involves analyzing text entered by the user.
+
+Request the following input:
+Information	Variable	Type
+Sentence	`sentence`	`string`
+Search word	`searchWord`	`string`
+Replacement word	`replacementWord`	`string`
+
+Then, perform the following operations:
+
+1. Text Transformation
+- Output the sentence in uppercase letters. - Output the sentence in lowercase.
+2. Text verification
+- Output the length of the sentence using `Length`.
+- Check if it contains the search term using `Contains()`.
+3. Text editing
+- Remove extra spaces using `Trim()`.
+- Replace the search term with the new one using `Replace()`.
+4. Text analysis
+- Find the position of the word using `IndexOf()`.
+- Output the first 4 characters using `Substring()`.
+- Check if the sentence starts with the letter 'I' using `StartsWith()`.
+- Check if it ends with a period using `EndsWith()`.
+For the `Substring()` exercise, the entered sentence must contain at least 4 characters.
+
+3. What should the final result look like?
+Here is an example of the approximate program layout. The values ​​are...examples, but you can use your own.
+CONSOLE OUTPUT
+
+=====================================
+PERSONAL UTILITY DASHBOARD
+=====================================
+
+--- PERSONAL PROFILE ---
+Name: Boris
+Age: 23
+City: Sofia
+Group: B
+Full-time student: True
+Favorite technology: C#
+
+--- BUDGET CALCULATOR ---
+Monthly budget: 1000
+Regular expenses: 350
+Extra expenses: 150
+Total expenses: 500
+Remaining budget: 500
+Is budget enough: True
+
+--- ADVANCED CALCULATOR ---
+First number: 25
+Second number: 10
+Sum: 35
+Difference: 15
+Product: 250
+Division: 2.5
+Remainder: 5
+First number is greater: True
+Numbers are equal: False
+
+--- MATH OPERATIONS ---
+Square root: 5
+Absolute value: 25
+Power of 2: 625
+Maximum: 25
+Minimum: 10
+
+--- CIRCLE CALCULATOR ---
+Radius: 5
+Area: 78.54
+Circumference: 31.42
+
+--- TEXT ANALYZER ---
+Original text: I love programming with C#
+Uppercase: I LOVE PROGRAMMING WITH C#
+Lowercase: i love programming with c#
+Length: 27
+Contains word: True
+Replaced text: I love programming with CSharp
+First 4 characters: I lo
+
+=====================================
+
+This is just an example of the design. Your result may look different.
+
+4. Completion Criteria
+Checklist
+0/11
+
+
+
+[ ] I created a Personal Profile with all the necessary data types.
+[ ] I used Console.ReadLine() and Convert for input data.
+[ ] I implemented a Budget Calculator using `decimal` and `+=`.
+[ ] I implemented an Advanced Calculator with the five arithmetic operations. [ ] I used comparison and logical operators.
+[ ] I practiced using `++`, `--`, and type casting.
+[ ] I used the necessary methods from the `Math` class.
+[ ] I implemented a Circle Calculator.
+[ ] I used all the specified `String` methods.
+[ ] I added comments and formatted the final report.
+[ ] I tested the program with various valid input values.
+
+5. Important Rules
+For this project, we will not yet use:
+- `if`, `else if`, `else`;
+- `switch`;
+- `for`, `while`, `foreach`;
+- custom methods and functions;
+- arrays and lists.
